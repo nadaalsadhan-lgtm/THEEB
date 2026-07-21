@@ -304,7 +304,7 @@
     <h1 style="color:#ffffff;font-size:28px;font-weight:800;margin-bottom:5px;">Partnerships Command Centre</h1>
     <div class="site-header-sub" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;color:#ffffff !important;font-size:14px;">
       <span style="color:#ffffff;"><b style="color:#ffffff;">Owners:</b> Nada Alsadhan &nbsp;·&nbsp; Mashael Alkadi &nbsp;·&nbsp; LEAP: 31 Aug 2026</span>
-      <span id="theebWhoChip" onclick="theebSetWho()" title="Click to set your name" style="font-size:12px;color:rgba(255,255,255,0.75);cursor:pointer;margin-right:10px;">👤 NADA</span><span id="jbStatus" style="font-size: 12px; color: rgb(63, 191, 143);">Connected 11:30</span>
+      <span id="theebWhoChip" onclick="theebSetWho()" title="Click to set your name" style="font-size:12px;color:rgba(255,255,255,0.75);cursor:pointer;margin-right:10px;">👤 NADA</span><span id="jbStatus" style="font-size: 12px; color: rgb(63, 191, 143);">Updated 11:43</span>
       <button id="jbSettingsBtn" style="background: rgba(63, 191, 143, 0.15); color: rgb(63, 191, 143); border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: var(--radius-sm); padding: 5px 11px; font-size: 12px; cursor: pointer; font-weight: 600;">☁ Share setup</button>
     </div>
     <div class="leap-stat">
@@ -318,7 +318,7 @@
     <button class="tab-btn" data-tab="map">
       🗺️ 3-Tier Target Map <span class="tab-count">22 orgs</span>
     </button>
-    <button class="tab-btn" data-tab="pipeline">
+    <button class="tab-btn active" data-tab="pipeline">
       📋 Deal Pipeline <span class="tab-count" id="plTabCount">22 deals</span>
     </button>
     <button class="tab-btn" data-tab="gtm">
@@ -353,7 +353,7 @@
   </div>
 
   <!-- ══════════════ TAB 2: TARGET MAP ══════════════ -->
-  <div class="tab-panel active" id="tab-map">
+  <div class="tab-panel" id="tab-map">
 
     <div class="toolbar">
       <select id="mFilterTier"><option value="All">All tiers</option><option value="1">Tier 1 — Government</option><option value="2">Tier 2 — Enterprise</option><option value="3">Tier 3 — Distribution</option><option value="5">Enablement &amp; Institutional</option></select>
@@ -371,12 +371,12 @@
       <div class="tier-hdr">
         <span class="tier-badge">Tier 1</span>
         <span class="tier-hdr-title">Tier 1 — Government &amp; National Infrastructure</span>
-        <span class="tier-hdr-count">10 orgs</span>
+        <span class="tier-hdr-count">11 orgs</span>
       </div>
       
       <div class="card-grid"><div class="org-card" data-id="monshaat" data-type="org" style="">
         <div class="org-card-top">
-          <div class="org-logo" style="color:var(--t1)">MN</div>
+          <div class="org-logo" style="color:var(--t1)">MON</div>
           <div class="org-info"><div class="org-name">Monsha'at</div><div class="org-type">General Authority for Small &amp; Medium Enterprises</div></div>
           <span class="priority-chip p-critical">Critical</span>
         </div>
@@ -387,7 +387,7 @@
         </div>
       </div><div class="org-card" data-id="moi" data-type="org" style="">
         <div class="org-card-top">
-          <div class="org-logo" style="color:var(--t1)">MoI</div>
+          <div class="org-logo" style="color:var(--t1)">MOI</div>
           <div class="org-info"><div class="org-name">MoI</div><div class="org-type">Ministry of the Interior</div></div>
           <span class="priority-chip p-high">High</span>
         </div>
@@ -398,7 +398,7 @@
         </div>
       </div><div class="org-card" data-id="moc" data-type="org" style="">
         <div class="org-card-top">
-          <div class="org-logo" style="color:var(--t1)">MoC</div>
+          <div class="org-logo" style="color:var(--t1)">MOC</div>
           <div class="org-info"><div class="org-name">MoC</div><div class="org-type">Ministry of Commerce</div></div>
           <span class="priority-chip p-high">High</span>
         </div>
@@ -418,20 +418,20 @@
           <span class="contact-pill">👤 PPP &amp; MSPs Division</span>
           <span class="entry-pill">→ Entry point</span>
         </div>
-      </div><div class="org-card" data-id="hrdf" data-type="org" style="border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);">
+      </div><div class="org-card" data-id="nlc" data-type="org" style="">
         <div class="org-card-top">
-          <div class="org-logo" style="color:var(--t1)">HRDF</div>
-          <div class="org-info"><div class="org-name">HRDF <span style="font-size:9px;font-weight:800;letter-spacing:0.5px;background:var(--accent);color:#fff;padding:2px 6px;border-radius:20px;vertical-align:middle;margin-left:4px;">⭐ STAGE 1</span></div><div class="org-type">Human Resources Development Fund (Hadaf) — parent of Jadarat &amp; National Labour Observatory (NLO)</div></div>
-          <span class="priority-chip p-high">High</span>
+          <div class="org-logo" style="color:var(--t1)">NLO</div>
+          <div class="org-info"><div class="org-name">NLO</div><div class="org-type">National Labour Observatory / HRDF</div></div>
+          <span class="priority-chip p-medium">Medium</span>
         </div>
-        <div class="org-pitch">Embed THEEB across HRDF's national employment engine — Jadarat and the NLO.Value for THEEB: Reach employers and job seekers nationwide through HRDF's Jadarat employment platform, and position THEEB as a trusted workforce-intelligence partner to the National Labour Observatory. Two national channels under one relationship.Value for HRDF: Strengthen Jadarat with AI-powered sourcing and faster, better-matched placements, and complement the NLO's labour-market research with real-time hiring intelligence — salary benchmarks, hiring speed, talent availability, and demand trends.Entry strategy: Open at the HRDF (Hadaf) partnerships level so one relationship covers both Jadarat and the NLO. Lead with a Jadarat integration pilot plus a data-sharing collaboration with the NLO — support for national employment outcomes, not a commercial pitch.</div>
+        <div class="org-pitch">Complement national labour research with real-time hiring intelligence.Value for THEEB: Establish THEEB as a trusted national workforce intelligence platform. Build long-term strategic collaboration through labour market data and analytics.Value for NLO: Complement national labour market research with real-time intelligence including salary benchmarks, hiring speed, talent availability, and demand trends.Entry strategy: Begin with a data-sharing and research collaboration, not a commercial partnership. Offer anonymised hiring trends, salary benchmarks, and talent demand insights. Explore joint workforce reports or research initiatives.</div>
         <div class="org-foot">
-          <span class="contact-pill">👤 Partnerships &amp; Strategy</span>
+          <span class="contact-pill">👤 Research &amp; Data Partnerships</span>
           <span class="entry-pill">→ Entry point</span>
         </div>
       </div><div class="org-card" data-id="misa" data-type="org" style="">
         <div class="org-card-top">
-          <div class="org-logo" style="color:var(--t1)">MI</div>
+          <div class="org-logo" style="color:var(--t1)">MIS</div>
           <div class="org-info"><div class="org-name">MISA</div><div class="org-type">Ministry of Investment Saudi Arabia</div></div>
           <span class="priority-chip p-high">High</span>
         </div>
@@ -440,10 +440,10 @@
           <span class="contact-pill">👤 InvestSaudi Digital Tools Team</span>
           <span class="entry-pill">→ Entry point</span>
         </div>
-      </div><div class="org-card" data-id="code" data-type="org" style="border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);">
+      </div><div class="org-card" data-id="code" data-type="org" style="">
         <div class="org-card-top">
-          <div class="org-logo" style="color:var(--t1)">CDE</div>
-          <div class="org-info"><div class="org-name">CODE / MCIT <span style="font-size:9px;font-weight:800;letter-spacing:0.5px;background:var(--accent);color:#fff;padding:2px 6px;border-radius:20px;vertical-align:middle;margin-left:4px;">⭐ STAGE 1</span></div><div class="org-type">Center of Digital Entrepreneurship — Ministry of Communications &amp; IT</div></div>
+          <div class="org-logo" style="color:var(--t1)">COD</div>
+          <div class="org-info"><div class="org-name">CODE / MCIT</div><div class="org-type">Center of Digital Entrepreneurship — Ministry of Communications &amp; IT</div></div>
           <span class="priority-chip p-critical">Critical</span>
         </div>
         <div class="org-pitch">Reach thousands of Saudi startups and technology companies through CODE accelerator and incubation ecosystem.Value for THEEB: Reach thousands of Saudi startups and technology companies through CODE accelerator ecosystem. Establish THEEB as the preferred AI hiring solution for startups supported by CODE.Value for CODE: Help portfolio companies hire qualified talent faster using AI-powered sourcing and decision intelligence. Strengthen CODE startup support offering by providing founders with an enterprise-grade recruitment platform that reduces hiring time and costs.Entry strategy: Position THEEB as a value-added benefit for startups enrolled in CODE programs. Propose inclusion within the Digital Perks Program and startup enablement initiatives.</div>
@@ -451,10 +451,10 @@
           <span class="contact-pill">👤 Digital Perks Program Team</span>
           <span class="entry-pill">→ Entry point</span>
         </div>
-      </div><div class="org-card" data-id="humain" data-type="org" style="border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);">
+      </div><div class="org-card" data-id="humain" data-type="org" style="">
         <div class="org-card-top">
           <div class="org-logo" style="color:var(--t1)">HMN</div>
-          <div class="org-info"><div class="org-name">HUMAIN <span style="font-size:9px;font-weight:800;letter-spacing:0.5px;background:var(--accent);color:#fff;padding:2px 6px;border-radius:20px;vertical-align:middle;margin-left:4px;">⭐ STAGE 1</span></div><div class="org-type">National AI Company (PIF-owned) — Data Centres, Cloud &amp; Arabic LLMs</div></div>
+          <div class="org-info"><div class="org-name">HUMAIN</div><div class="org-type">National AI Company (PIF-owned) — Data Centres, Cloud &amp; Arabic LLMs</div></div>
           <span class="priority-chip p-critical">Critical</span>
         </div>
         <div class="org-pitch">Position THEEB inside the Kingdom's flagship national AI champion.Value for THEEB: Align THEEB with HUMAIN, the PIF-backed national AI company driving Saudi Arabia's full-stack AI ambitions. Gain credibility, compute access, and reach into the enterprises and government entities HUMAIN is already serving. Position THEEB as the applied AI recruitment layer within a national AI platform.Value for HUMAIN: Add a ready-made, vertical AI application for talent and workforce intelligence to HUMAIN's ecosystem. Demonstrate real-world Arabic-first AI value for employers and job seekers, strengthening HUMAIN's applied-AI portfolio beyond infrastructure and foundation models.Entry strategy: Approach as an applied-AI partnership, not a vendor pitch. Propose THEEB as a workforce-intelligence use case built on or integrated with HUMAIN's infrastructure and Arabic LLM capabilities. Start with a focused proof of concept demonstrating measurable hiring outcomes.</div>
@@ -462,10 +462,10 @@
           <span class="contact-pill">👤 Partnerships / Applied AI Team</span>
           <span class="entry-pill">→ Entry point</span>
         </div>
-      </div><div class="org-card" data-id="takamol" data-type="org" style="border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);">
+      </div><div class="org-card" data-id="takamol" data-type="org" style="">
         <div class="org-card-top">
-          <div class="org-logo" style="color:var(--t1)">TK</div>
-          <div class="org-info"><div class="org-name">Takamol <span style="font-size:9px;font-weight:800;letter-spacing:0.5px;background:var(--accent);color:#fff;padding:2px 6px;border-radius:20px;vertical-align:middle;margin-left:4px;">⭐ STAGE 1</span></div><div class="org-type">National Workforce &amp; Labor Market Enabler (MHRSD subsidiary)</div></div>
+          <div class="org-logo" style="color:var(--t1)">TAK</div>
+          <div class="org-info"><div class="org-name">Takamol</div><div class="org-type">National Workforce &amp; Labor Market Enabler (MHRSD subsidiary)</div></div>
           <span class="priority-chip p-critical">Critical</span>
         </div>
         <div class="org-pitch">Become the AI sourcing layer within Saudi Arabia largest employment ecosystem.Value for THEEB: Integrate with Qiwa and Mudad to achieve nationwide visibility across Saudi employers. Every Saudi employer using Qiwa sees THEEB natively, the highest-leverage distribution move on the map.Value for Takamol: Expand Qiwa from a compliance platform into an end-to-end employment ecosystem. Deliver greater value to employers through AI-powered talent sourcing and market intelligence without requiring additional systems.Entry strategy: Lead with a platform integration discussion, not a reseller agreement. Demonstrate how THEEB complements Qiwa and Mudad.</div>
@@ -482,6 +482,17 @@
         <div class="org-pitch">Access one of Saudi Arabia's largest digital ecosystems through strategic platform integration.Strategic value for THEEB: Access one of Saudi Arabia's largest digital ecosystems and position THEEB within national digital services used by employers across the Kingdom.Strategic value for Elm: Enhance Elm's digital services with AI-powered talent sourcing and workforce intelligence. Expand the value of Muqeem and Absher Business by helping organisations transition seamlessly from regulatory processes to workforce acquisition.Entry strategy: Lead with a strategic platform integration discussion rather than a commercial reseller proposal. Engage the Strategic Alliances team to explore embedding THEEB within employer-facing digital services.</div>
         <div class="org-foot">
           <span class="contact-pill">👤 Dr. Nasser Al-Meshary</span>
+          <span class="entry-pill">→ Entry point</span>
+        </div>
+      </div><div class="org-card" data-id="org_jllhw79" data-type="org" style="">
+        <div class="org-card-top">
+          <div class="org-logo" style="color:var(--t1)">TES</div>
+          <div class="org-info"><div class="org-name">TEST</div><div class="org-type"></div></div>
+          <span class="priority-chip p-high">High</span>
+        </div>
+        <div class="org-pitch"></div>
+        <div class="org-foot">
+          <span class="contact-pill">👤 —</span>
           <span class="entry-pill">→ Entry point</span>
         </div>
       </div></div></div><div class="tier-section tt2">
@@ -542,13 +553,13 @@
       <div class="tier-hdr">
         <span class="tier-badge">Tier 3</span>
         <span class="tier-hdr-title">Tier 3 — Channel &amp; Distribution</span>
-        <span class="tier-hdr-count">6 orgs</span>
+        <span class="tier-hdr-count">4 orgs</span>
       </div>
       
-      <div class="card-grid"><div class="org-card" data-id="mis" data-type="org" style="border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);">
+      <div class="card-grid"><div class="org-card" data-id="mis" data-type="org" style="">
         <div class="org-card-top">
-          <div class="org-logo" style="color:var(--t3)">MIS</div>
-          <div class="org-info"><div class="org-name">Al Moammar (MIS) <span style="font-size:9px;font-weight:800;letter-spacing:0.5px;background:var(--accent);color:#fff;padding:2px 6px;border-radius:20px;vertical-align:middle;margin-left:4px;">⭐ STAGE 1</span></div><div class="org-type">IT Systems Integrator &amp; Reseller (listed, 40+ years)</div></div>
+          <div class="org-logo" style="color:var(--t3)">AL </div>
+          <div class="org-info"><div class="org-name">Al Moammar (MIS)</div><div class="org-type">IT Systems Integrator &amp; Reseller (listed, 40+ years)</div></div>
           <span class="priority-chip p-high">High</span>
         </div>
         <div class="org-pitch">Leverage MIS 40 years of enterprise relationships for instant market reach.Value for THEEB: Leverage MIS established enterprise and government customer base to accelerate market penetration. Expand reach through a trusted technology partner with strong relationships across both sectors.Value for MIS: Expand their HR technology portfolio with an AI-powered sourcing and decision intelligence solution. Deliver additional value to existing clients by reducing recruitment costs and accelerating hiring.Entry strategy: Position THEEB as a complementary solution within MIS HR and digital transformation portfolio. Start with a referral partnership, then expand into a reseller agreement with joint go-to-market activities. Door: Mahmoud Sadeak, BD and Partnerships Director.</div>
@@ -556,20 +567,9 @@
           <span class="contact-pill">👤 Mahmoud A. Sadeak</span>
           <span class="entry-pill">→ Entry point</span>
         </div>
-      </div><div class="org-card" data-id="stc_channels" data-type="org" style="border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);">
-        <div class="org-card-top">
-          <div class="org-logo" style="color:var(--t3)">STCC</div>
-          <div class="org-info"><div class="org-name">stc Channels <span style="font-size:9px;font-weight:800;letter-spacing:0.5px;background:var(--accent);color:#fff;padding:2px 6px;border-radius:20px;vertical-align:middle;margin-left:4px;">⭐ STAGE 1</span></div><div class="org-type">Distribution &amp; Channel arm of stc — nationwide reseller &amp; retail network</div></div>
-          <span class="priority-chip p-high">High</span>
-        </div>
-        <div class="org-pitch">Put THEEB into stc's nationwide distribution and business-customer network.Value for THEEB: Tap stc Channels' extensive reach into Saudi businesses and SMEs through the Kingdom's largest telecom distribution and retail network. Instant, credible market access via a partner that already sells digital services to THEEB's exact audience.Value for stc Channels: Add an AI-powered hiring and workforce-intelligence product to their B2B digital-services bundle — a new revenue line and a differentiator for business customers, with no build cost.Entry strategy: Approach as a channel / reseller partnership. Propose bundling THEEB into stc's SME and enterprise digital-services offering with a commission or reseller model and co-marketing. Start with a focused pilot to one business-customer segment.</div>
-        <div class="org-foot">
-          <span class="contact-pill">👤 Partnerships / Channel Team</span>
-          <span class="entry-pill">→ Entry point</span>
-        </div>
       </div><div class="org-card" data-id="innovative" data-type="org" style="">
         <div class="org-card-top">
-          <div class="org-logo" style="color:var(--t3)">IS</div>
+          <div class="org-logo" style="color:var(--t3)">INN</div>
           <div class="org-info"><div class="org-name">Innovative Solutions</div><div class="org-type">IT Consultancy &amp; System Integrator</div></div>
           <span class="priority-chip p-medium">Medium</span>
         </div>
@@ -580,7 +580,7 @@
         </div>
       </div><div class="org-card" data-id="mozn" data-type="org" style="">
         <div class="org-card-top">
-          <div class="org-logo" style="color:var(--t3)">MZ</div>
+          <div class="org-logo" style="color:var(--t3)">MOZ</div>
           <div class="org-info"><div class="org-name">Mozn</div><div class="org-type">Saudi AI Company (Fanar Arabic LLM)</div></div>
           <span class="priority-chip p-medium">Medium</span>
         </div>
@@ -589,9 +589,27 @@
           <span class="contact-pill">👤 Technology Partnerships Team</span>
           <span class="entry-pill">→ Entry point</span>
         </div>
-      </div><div class="org-card" data-id="misk_fdn" data-type="org" style="">
+      </div><div class="org-card" data-id="hrlines_ch" data-type="org" style="">
         <div class="org-card-top">
-          <div class="org-logo" style="color:var(--t3)">MSK</div>
+          <div class="org-logo" style="color:var(--t3)">HR </div>
+          <div class="org-info"><div class="org-name">HR Lines</div><div class="org-type">HR Consultancy &amp; Digital Transformation — Startups &amp; SMEs</div></div>
+          <span class="priority-chip p-high">High</span>
+        </div>
+        <div class="org-pitch">Reach SMEs and startups through a recruitment partner already serving THEEB exact audience.Value for THEEB: Reach SMEs and startups through a recruitment partner embedded in THEEB target market. Build a scalable referral channel with a firm whose clients need exactly what THEEB delivers.Value for HR Lines: Increase recruiter productivity by reducing sourcing time by up to 90%. Create an additional revenue stream through referral or reseller commissions while strengthening AI credentials with clients.Entry strategy: Establish a referral or reseller agreement with co-marketing support.</div>
+        <div class="org-foot">
+          <span class="contact-pill">👤 Partnerships Team</span>
+          <span class="entry-pill">→ Entry point</span>
+        </div>
+      </div></div></div><div class="tier-section tt4">
+      <div class="tier-hdr">
+        <span class="tier-badge">Tier 4</span>
+        <span class="tier-hdr-title">Tier 4 — Talent Pipeline</span>
+        <span class="tier-hdr-count">1 org</span>
+      </div>
+      
+      <div class="card-grid"><div class="org-card" data-id="misk_fdn" data-type="org" style="">
+        <div class="org-card-top">
+          <div class="org-logo" style="color:var(--t4)">MSK</div>
           <div class="org-info"><div class="org-name">Misk Foundation</div><div class="org-type">Non-profit Foundation — Youth Leadership, Entrepreneurship &amp; Talent Development</div></div>
           <span class="priority-chip p-critical">Critical</span>
         </div>
@@ -600,53 +618,13 @@
           <span class="contact-pill">👤 Business Development &amp; Partnerships</span>
           <span class="entry-pill">→ Entry point</span>
         </div>
-      </div><div class="org-card" data-id="hrlines_ch" data-type="org" style="border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);">
-        <div class="org-card-top">
-          <div class="org-logo" style="color:var(--t3)">HRL</div>
-          <div class="org-info"><div class="org-name">HR Lines <span style="font-size:9px;font-weight:800;letter-spacing:0.5px;background:var(--accent);color:#fff;padding:2px 6px;border-radius:20px;vertical-align:middle;margin-left:4px;">⭐ STAGE 1</span></div><div class="org-type">HR Consultancy &amp; Digital Transformation — Startups &amp; SMEs</div></div>
-          <span class="priority-chip p-high">High</span>
-        </div>
-        <div class="org-pitch">Reach SMEs and startups through a recruitment partner already serving THEEB exact audience.Value for THEEB: Reach SMEs and startups through a recruitment partner embedded in THEEB target market. Build a scalable referral channel with a firm whose clients need exactly what THEEB delivers.Value for HR Lines: Increase recruiter productivity by reducing sourcing time by up to 90%. Create an additional revenue stream through referral or reseller commissions while strengthening AI credentials with clients.Entry strategy: Establish a referral or reseller agreement with co-marketing support.</div>
-        <div class="org-foot">
-          <span class="contact-pill">👤 Partnerships Team</span>
-          <span class="entry-pill">→ Entry point</span>
-        </div>
-      </div></div></div><div class="tier-section tt5">
-      <div class="tier-hdr">
-        <span class="tier-badge">Tier 5</span>
-        <span class="tier-hdr-title">Enablement &amp; Institutional</span>
-        <span class="tier-hdr-count">2 orgs</span>
-      </div>
-      
-      <div class="card-grid"><div class="org-card" data-id="sdaia" data-type="org" style="">
-        <div class="org-card-top">
-          <div class="org-logo" style="color:var(--t5)">SDAIA</div>
-          <div class="org-info"><div class="org-name">SDAIA</div><div class="org-type">Saudi Data &amp; AI Authority — national AI governance &amp; accreditation</div></div>
-          <span class="priority-chip p-high">High</span>
-        </div>
-        <div class="org-pitch">Secure national AI credibility and accreditation for THEEB.Value for THEEB: Alignment and accreditation with SDAIA, the Kingdom's national authority for data and AI, gives THEEB regulatory credibility, trust with government and enterprise buyers, and a place in the national AI ecosystem.Value for SDAIA: A homegrown, Arabic-first applied-AI use case that advances national AI adoption and responsible-AI goals in the workforce domain.Entry strategy: Engage SDAIA on responsible-AI alignment and accreditation / registration pathways for AI products. Position THEEB as a compliant national AI application, not a vendor.</div>
-        <div class="org-foot">
-          <span class="contact-pill">👤 AI Ecosystem / Accreditation</span>
-          <span class="entry-pill">→ Entry point</span>
-        </div>
-      </div><div class="org-card" data-id="saip" data-type="org" style="">
-        <div class="org-card-top">
-          <div class="org-logo" style="color:var(--t5)">SAIP</div>
-          <div class="org-info"><div class="org-name">SAIP</div><div class="org-type">Saudi Authority for Intellectual Property — trademarks, patents &amp; IP</div></div>
-          <span class="priority-chip p-medium">Medium</span>
-        </div>
-        <div class="org-pitch">Protect the THEEB brand and technology in the Kingdom.Value for THEEB: Register and protect THEEB's trademark, brand, and any patentable technology with SAIP — securing IP before scale and partnership announcements.Value for SAIP: A local technology company actively using the national IP system, supporting SAIP's mandate to grow IP registration and protection in the Kingdom.Entry strategy: A straightforward registration workstream — file THEEB's trademark and review patent options through SAIP's e-services. A legal/administrative task, not a partnership negotiation.</div>
-        <div class="org-foot">
-          <span class="contact-pill">👤 Registration / e-Services</span>
-          <span class="entry-pill">→ Entry point</span>
-        </div>
       </div></div></div></div>
     <div id="mapTableView" style="display:none;"></div>
 
   </div>
 
   <!-- ══════════════ TAB 3: DEAL PIPELINE ══════════════ -->
-  <div class="tab-panel" id="tab-pipeline">
+  <div class="tab-panel active" id="tab-pipeline">
 
     <span id="daysToLeap" style="display:none;"></span><span id="ghostNumber" style="display:none;"></span>
 
@@ -665,10 +643,24 @@
         <div class="kanban-col-head">
           <span class="kanban-col-ghost">01</span>
           <span class="kanban-col-title">Identified</span>
-          <span class="kanban-col-count">18</span>
+          <span class="kanban-col-count">21</span>
         </div>
         <div class="kanban-col-body" data-stage="Identified">
-          <div class="deal-card" draggable="true" data-id="d_k0ef9f9q" style="">
+          <div class="deal-card" draggable="true" data-id="d_y8g8iix8" style="">
+      <div class="deal-card-top">
+        <div>
+          <span style="display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;margin-bottom:5px;background:#2d5fa333;color:#2d5fa3;">Government</span><br>
+          <span class="deal-name">Monsha'at</span>
+        </div>
+      </div>
+      <div class="deal-next">Identify decision-maker; book meeting by ~1 Jul. Frame as the Kingdom digital transformation / SME-enabler, propose pilot in Nawafth.</div>
+      <div class="deal-foot">
+        <span>15 Jul 2026</span>
+        
+        <span class="flag escalate">⚑ escalate</span>
+        <span style="margin-left:auto;">✎ NADA</span>
+      </div>
+    </div><div class="deal-card" draggable="true" data-id="d_k0ef9f9q" style="">
       <div class="deal-card-top">
         <div>
           <span style="display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;margin-bottom:5px;background:#2d5fa333;color:#2d5fa3;">Government</span><br>
@@ -695,6 +687,20 @@
         
         
         
+      </div>
+    </div><div class="deal-card" draggable="true" data-id="d_xs3wiwc4" style="">
+      <div class="deal-card-top">
+        <div>
+          <span style="display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;margin-bottom:5px;background:#2d5fa333;color:#2d5fa3;">Government</span><br>
+          <span class="deal-name">MHRSD</span>
+        </div>
+      </div>
+      <div class="deal-next">Explore fit once Monsha'at / MoI relationships are open.</div>
+      <div class="deal-foot">
+        <span>15 Aug 2026</span>
+        
+        
+        <span style="margin-left:auto;">✎ NADA</span>
       </div>
     </div><div class="deal-card" draggable="true" data-id="d_ajcigkrx" style="border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);">
       <div class="deal-card-top">
@@ -864,6 +870,20 @@
         
         
       </div>
+    </div><div class="deal-card" draggable="true" data-id="d_cpkhbfks" style="border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);">
+      <div class="deal-card-top">
+        <div>
+          <span style="display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;margin-bottom:5px;background:#9a702033;color:#9a7020;">Channel</span> <span style="display:inline-block;font-size:9px;font-weight:800;letter-spacing:0.3px;padding:2px 6px;border-radius:20px;background:var(--accent);color:#fff;margin-bottom:5px;">⭐ STAGE 1</span><br>
+          <span class="deal-name">HR Lines</span>
+        </div>
+      </div>
+      <div class="deal-next">WhatsApp/email info@hrlines.sa — SME HR consultancy, exact THEEB audience match.</div>
+      <div class="deal-foot">
+        <span>20 Aug 2026</span>
+        
+        
+        <span style="margin-left:auto;">✎ NADA</span>
+      </div>
     </div><div class="deal-card" draggable="true" data-id="d_jh3h239e" style="border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);">
       <div class="deal-card-top">
         <div>
@@ -926,52 +946,10 @@
         <div class="kanban-col-head">
           <span class="kanban-col-ghost">02</span>
           <span class="kanban-col-title">First Contact</span>
-          <span class="kanban-col-count">3</span>
+          <span class="kanban-col-count">0</span>
         </div>
         <div class="kanban-col-body" data-stage="First Contact">
-          <div class="deal-card" draggable="true" data-id="d_y8g8iix8" style="">
-      <div class="deal-card-top">
-        <div>
-          <span style="display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;margin-bottom:5px;background:#2d5fa333;color:#2d5fa3;">Government</span><br>
-          <span class="deal-name">Monsha'at</span>
-        </div>
-      </div>
-      <div class="deal-next">Identify decision-maker; book meeting by ~1 Jul. Frame as the Kingdom digital transformation / SME-enabler, propose pilot in Nawafth.</div>
-      <div class="deal-foot">
-        <span>15 Jul 2026</span>
-        
-        <span class="flag escalate">⚑ escalate</span>
-        <span style="margin-left:auto;">✎ NADA</span>
-      </div>
-    </div><div class="deal-card" draggable="true" data-id="d_xs3wiwc4" style="">
-      <div class="deal-card-top">
-        <div>
-          <span style="display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;margin-bottom:5px;background:#2d5fa333;color:#2d5fa3;">Government</span><br>
-          <span class="deal-name">MHRSD</span>
-        </div>
-      </div>
-      <div class="deal-next">Explore fit once Monsha'at / MoI relationships are open.</div>
-      <div class="deal-foot">
-        <span>15 Aug 2026</span>
-        
-        
-        <span style="margin-left:auto;">✎ NADA</span>
-      </div>
-    </div><div class="deal-card" draggable="true" data-id="d_cpkhbfks" style="border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);">
-      <div class="deal-card-top">
-        <div>
-          <span style="display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;margin-bottom:5px;background:#9a702033;color:#9a7020;">Channel</span> <span style="display:inline-block;font-size:9px;font-weight:800;letter-spacing:0.3px;padding:2px 6px;border-radius:20px;background:var(--accent);color:#fff;margin-bottom:5px;">⭐ STAGE 1</span><br>
-          <span class="deal-name">HR Lines</span>
-        </div>
-      </div>
-      <div class="deal-next">WhatsApp/email info@hrlines.sa — SME HR consultancy, exact THEEB audience match.</div>
-      <div class="deal-foot">
-        <span>20 Aug 2026</span>
-        
-        
-        <span style="margin-left:auto;">✎ NADA</span>
-      </div>
-    </div>
+          
         </div>
       </div><div class="kanban-col ">
         <div class="kanban-col-head">
@@ -1036,7 +1014,7 @@
     <div id="tableView" style="display:none;"></div>
 
     <div class="pl-footer">
-      <span id="syncStatus">Synced · shared with anyone on this board</span>
+      <span id="syncStatus">Saved on this device · syncing to team</span>
       <span><a id="resetLink">Reset to starting list</a></span>
     </div>
 
@@ -3054,24 +3032,8 @@ function jbApply(data) {
   if (!data) return false;
   var changed = false;
   if (data.orgs && Array.isArray(data.orgs) && data.orgs.length > 0 && typeof ORGS !== 'undefined') {
-    // Only apply remote orgs if they have the updated structure (4 tiers, structured pitches)
-    var remoteTiers = data.orgs.reduce(function(s,o){s.add(o.tier);return s;}, new Set());
-    var remoteHasNewPitches = data.orgs.some(function(o) { return o.pitch && o.pitch.indexOf('Value for THEEB') > -1; });
-    var remoteHas4Tiers = remoteTiers.has(4);
-    if (remoteHasNewPitches && remoteHas4Tiers && data.orgs.length >= 18) {
-      ORGS = data.orgs; changed = true;
-    } else {
-      // Remote has old pitches — merge: keep local pitch/contacts/entry, take remote stage/owner/status changes
-      data.orgs.forEach(function(remoteOrg) {
-        var localOrg = ORGS.find(function(o) { return o.id === remoteOrg.id || o.name === remoteOrg.name; });
-        if (localOrg) {
-          // Preserve updated local pitch, contacts, entry — apply remote operational fields
-          if (remoteOrg.owner)  localOrg.owner  = remoteOrg.owner;
-          if (remoteOrg.status) localOrg.status = remoteOrg.status;
-        }
-      });
-      changed = true;
-    }
+    // Cloud is the shared source of truth for collaborative editing — apply remote orgs directly.
+    ORGS = data.orgs; changed = true;
   }
   if (data.deals && Array.isArray(data.deals) && data.deals.length > 0 && typeof plDeals !== 'undefined') { plDeals = data.deals; changed = true; }
   if (data.docs  && Array.isArray(data.docs)  && data.docs.length  > 0 && typeof docs    !== 'undefined') { docs    = data.docs;  changed = true; }
