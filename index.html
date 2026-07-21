@@ -304,7 +304,7 @@
     <h1 style="color:#ffffff;font-size:28px;font-weight:800;margin-bottom:5px;">Partnerships Command Centre</h1>
     <div class="site-header-sub" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;color:#ffffff !important;font-size:14px;">
       <span style="color:#ffffff;"><b style="color:#ffffff;">Owners:</b> Nada Alsadhan &nbsp;·&nbsp; Mashael Alkadi &nbsp;·&nbsp; LEAP: 31 Aug 2026</span>
-      <span id="theebWhoChip" onclick="theebSetWho()" title="Click to set your name" style="font-size:12px;color:rgba(255,255,255,0.75);cursor:pointer;margin-right:10px;">👤 nalsadhan@kabi.ai</span><span id="jbStatus" style="font-size: 12px; color: rgb(148, 163, 184);">✓ nalsadhan@kabi.ai &nbsp;<a href="file:///C:/Users/NadaAlsadhan/AppData/Roaming/Claude/local-agent-mode-sessions/72ea85b1-3b8e-4852-9b92-f86c3038e7ab/e89dd227-f092-4699-a821-47a190797bfc/local_fe4cb468-476d-4ae9-a987-0ca3c623c8a8/outputs/THEEB_Fixed.html#" onclick="THEEB_logout();return false;" style="color:#E3CCA5;text-decoration:underline;">Change</a></span>
+      <span id="theebWhoChip" onclick="theebSetWho()" title="Click to set your name" style="font-size:12px;color:rgba(255,255,255,0.75);cursor:pointer;margin-right:10px;">👤 nalsadhan@kabi.ai</span><span id="jbStatus" style="font-size: 12px; color: rgb(148, 163, 184);">Not connected</span>
       <button id="jbSettingsBtn" style="display:none;">☁ Share setup</button>
     </div>
     <div class="leap-stat">
@@ -318,7 +318,7 @@
     <button class="tab-btn" data-tab="map">
       🗺️ 3-Tier Target Map <span class="tab-count">22 orgs</span>
     </button>
-    <button class="tab-btn active" data-tab="pipeline">
+    <button class="tab-btn" data-tab="pipeline">
       📋 Deal Pipeline <span class="tab-count" id="plTabCount">22 deals</span>
     </button>
     <button class="tab-btn" data-tab="gtm">
@@ -353,7 +353,7 @@
   </div>
 
   <!-- ══════════════ TAB 2: TARGET MAP ══════════════ -->
-  <div class="tab-panel" id="tab-map">
+  <div class="tab-panel active" id="tab-map">
 
     <div class="toolbar">
       <select id="mFilterTier"><option value="All">All tiers</option><option value="1">Tier 1 — Government</option><option value="2">Tier 2 — Enterprise</option><option value="3">Tier 3 — Distribution</option><option value="5">Enablement &amp; Institutional</option></select>
@@ -646,7 +646,7 @@
   </div>
 
   <!-- ══════════════ TAB 3: DEAL PIPELINE ══════════════ -->
-  <div class="tab-panel active" id="tab-pipeline">
+  <div class="tab-panel" id="tab-pipeline">
 
     <span id="daysToLeap" style="display:none;"></span><span id="ghostNumber" style="display:none;"></span>
 
@@ -1036,7 +1036,7 @@
     <div id="tableView" style="display:none;"></div>
 
     <div class="pl-footer">
-      <span id="syncStatus">Saved on this device · syncing to team</span>
+      <span id="syncStatus">Synced · shared with anyone on this board</span>
       <span><a id="resetLink">Reset to starting list</a></span>
     </div>
 
@@ -3324,14 +3324,14 @@ document.getElementById('jbPushBtn').addEventListener('click', async function() 
 
 
 </div><!-- ══════════════ FIREBASE LOGIN + LIVE SYNC ══════════════ -->
-<div id="fbLoginOverlay" style="position: fixed; inset: 0px; background: rgb(10, 7, 4); display: none; align-items: center; justify-content: center; z-index: 9999; font-family: Rubik, sans-serif;">
+<div id="fbLoginOverlay" style="position:fixed;inset:0;background:#0a0704;display:flex;align-items:center;justify-content:center;z-index:9999;font-family:&#39;Rubik&#39;,sans-serif;">
   <div style="width:340px;max-width:90%;background:#fff;border-radius:14px;padding:28px;box-shadow:0 24px 70px rgba(0,0,0,0.55);">
     <div style="text-align:center;margin-bottom:6px;font-size:13px;font-weight:800;letter-spacing:3px;color:#A75F27;">T H E E B</div>
     <div style="text-align:center;font-size:18px;font-weight:800;color:#111827;margin-bottom:4px;">Command Centre</div>
     <div style="text-align:center;font-size:12.5px;color:#4b5563;margin-bottom:18px;">Enter your email to continue.<br>It's used to tag your edits — no password, no link.</div>
     <input id="fbEmail" type="email" placeholder="Your work email" autocomplete="username" style="width:100%;padding:11px 12px;margin-bottom:12px;border:1px solid #dde1f0;border-radius:8px;font-size:14px;box-sizing:border-box;">
     <button onclick="THEEB_continue()" style="width:100%;padding:11px;background:#A75F27;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;">Continue</button>
-    <div id="fbErr" style="color: rgb(75, 85, 99); font-size: 12px; margin-top: 10px; text-align: center; min-height: 16px; line-height: 1.4;"></div>
+    <div id="fbErr" style="color:#e0556a;font-size:12px;margin-top:10px;text-align:center;min-height:16px;line-height:1.4;">Could not connect. In Firebase, enable Anonymous sign-in (Authentication → Sign-in method).</div>
   </div>
 </div>
 
