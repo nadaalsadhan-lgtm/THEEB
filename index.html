@@ -304,7 +304,7 @@
     <h1 style="color:#ffffff;font-size:28px;font-weight:800;margin-bottom:5px;">Partnerships Command Centre</h1>
     <div class="site-header-sub" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;color:#ffffff !important;font-size:14px;">
       <span style="color:#ffffff;"><b style="color:#ffffff;">Owners:</b> Nada Alsadhan &nbsp;·&nbsp; Mashael Alkadi &nbsp;·&nbsp; LEAP: 31 Aug 2026</span>
-      <span id="theebWhoChip" onclick="theebSetWho()" title="Click to set your name" style="font-size:12px;color:rgba(255,255,255,0.75);cursor:pointer;margin-right:10px;">👤 nalsadhan@kabi.ai</span><span id="jbStatus" style="font-size: 12px; color: rgb(148, 163, 184);">✓ nalsadhan@kabi.ai &nbsp;<a href="file:///C:/Users/NadaAlsadhan/AppData/Roaming/Claude/local-agent-mode-sessions/72ea85b1-3b8e-4852-9b92-f86c3038e7ab/e89dd227-f092-4699-a821-47a190797bfc/local_fe4cb468-476d-4ae9-a987-0ca3c623c8a8/outputs/THEEB_Fixed.html#" onclick="THEEB_logout();return false;" style="color:#E3CCA5;text-decoration:underline;">Change</a></span>
+      <span id="theebWhoChip" onclick="theebSetWho()" title="Click to set your name" style="font-size:12px;color:rgba(255,255,255,0.75);cursor:pointer;margin-right:10px;">👤 nalsadhan@kabi.ai</span><span id="jbStatus" style="font-size: 12px; color: rgb(148, 163, 184);">✓ nalsadhan@kabi.ai &nbsp;<a href="file:///C:/Users/NadaAlsadhan/AppData/Roaming/Claude/local-agent-mode-sessions/72ea85b1-3b8e-4852-9b92-f86c3038e7ab/e89dd227-f092-4699-a821-47a190797bfc/local_fe4cb468-476d-4ae9-a987-0ca3c623c8a8/outputs/THEEB_Fixed.html#" onclick="THEEB_openLog();return false;" style="color:#E3CCA5;text-decoration:underline;">Log</a> &nbsp;<a href="file:///C:/Users/NadaAlsadhan/AppData/Roaming/Claude/local-agent-mode-sessions/72ea85b1-3b8e-4852-9b92-f86c3038e7ab/e89dd227-f092-4699-a821-47a190797bfc/local_fe4cb468-476d-4ae9-a987-0ca3c623c8a8/outputs/THEEB_Fixed.html#" onclick="THEEB_logout();return false;" style="color:#E3CCA5;text-decoration:underline;">Change</a></span>
       <button id="jbSettingsBtn" style="display:none;">☁ Share setup</button>
     </div>
     <div class="leap-stat">
@@ -680,7 +680,7 @@
         <span>15 Jul 2026</span>
         
         <span class="flag escalate">⚑ escalate</span>
-        <span style="margin-left:auto;">✎ NADA</span>
+        <span style="margin-left:auto;max-width:96px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="aalqurashi@kabi.ai">✎ aalqurashi</span>
       </div>
     </div><div class="deal-card" draggable="true" data-id="d_k0ef9f9q" style="">
       <div class="deal-card-top">
@@ -722,7 +722,7 @@
         <span>15 Aug 2026</span>
         
         
-        <span style="margin-left:auto;">✎ NADA</span>
+        <span style="margin-left:auto;max-width:96px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="NADA">✎ NADA</span>
       </div>
     </div><div class="deal-card" draggable="true" data-id="d_ajcigkrx" style="border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);">
       <div class="deal-card-top">
@@ -968,8 +968,8 @@
       <div class="deal-foot">
         <span>20 Aug 2026</span>
         
-        
-        <span style="margin-left:auto;">✎ nalsadhan@kabi.ai</span>
+        <span class="flag escalate">⚑ escalate</span>
+        <span style="margin-left:auto;max-width:96px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="nalsadhan@kabi.ai">✎ nalsadhan</span>
       </div>
     </div>
         </div>
@@ -1010,7 +1010,7 @@
         <span>31 Aug 2026</span>
         
         
-        <span style="margin-left:auto;">✎ nalsadhan@kabi.ai</span>
+        <span style="margin-left:auto;max-width:96px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="nalsadhan@kabi.ai">✎ nalsadhan</span>
       </div>
     </div>
         </div>
@@ -2047,7 +2047,7 @@ function openSheet(type,id){
       ${o.editedBy?`<div style="margin-top:14px;font-size:11.5px;color:var(--text-tertiary);">\uD83D\uDD8A\uFE0F ${theebEditedLabel(o.editedBy,o.editedAt)}</div>`:''}
       <div style="margin-top:16px;display:flex;gap:8px;">
         <button data-editorg="${o.id}" style="background:var(--accent);color:#fff;border:none;border-radius:var(--radius-sm);padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer;">✏️ Edit</button>
-        <button data-delorg="${o.id}" style="background:transparent;color:var(--danger);border:1px solid rgba(224,85,106,0.3);border-radius:var(--radius-sm);padding:9px 14px;font-size:13px;font-weight:700;cursor:pointer;">Delete</button>
+        ${(window.THEEB_isAdmin&&window.THEEB_isAdmin())?`<button data-delorg="${o.id}" style="background:transparent;color:var(--danger);border:1px solid rgba(224,85,106,0.3);border-radius:var(--radius-sm);padding:9px 14px;font-size:13px;font-weight:700;cursor:pointer;">Delete</button>`:``}
       </div>`;
   }
   }catch(err){
@@ -2231,7 +2231,7 @@ renderMapAll();
         <span>${plFmt(d.targetClose)}</span>
         ${stalled ? '<span class="flag warn">⚠ stalled</span>' : ''}
         ${d.escalate ? '<span class="flag escalate">⚑ escalate</span>' : ''}
-        ${d.editedBy ? '<span style="margin-left:auto;">\u270E '+plEsc(d.editedBy)+'</span>' : ''}
+        ${d.editedBy ? '<span style="margin-left:auto;max-width:96px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="'+plEsc(d.editedBy)+'">\u270E '+plEsc(String(d.editedBy).split('@')[0])+'</span>' : ''}
       </div>
     </div>`;
   }
@@ -2335,6 +2335,7 @@ renderMapAll();
       const deal = plDeals.find(d=>d.id===id);
       if(deal && deal.stage!==stage){
         deal.stage = stage; deal.lastUpdated = new Date().toISOString(); deal.editedBy = theebWho();
+        try{ if(window.THEEB_log) window.THEEB_log('moved '+deal.name+' \u2192 '+stage); }catch(e){}
         plRender(); await plSave();
       }
     });
@@ -2365,7 +2366,7 @@ renderMapAll();
       document.getElementById('dealBlocker').value   = d.blocker||'';
       document.getElementById('dealNotes').value     = d.notes||'';
       document.getElementById('dealEscalate').checked= !!d.escalate;
-      document.getElementById('deleteBtn').style.display='inline-block';
+      document.getElementById('deleteBtn').style.display=(window.THEEB_isAdmin&&window.THEEB_isAdmin())?'inline-block':'none';
     } else {
       document.getElementById('modalTitle').textContent='Add partner';
       ['dealName','dealNextStep','dealBlocker','dealNotes'].forEach(id=>document.getElementById(id).value='');
@@ -2397,6 +2398,7 @@ renderMapAll();
     };
     if(id){ const i=plDeals.findIndex(d=>d.id===id); if(i>-1) plDeals[i]={...plDeals[i],...payload}; }
     else   { plDeals.push({id:plUid(),...payload}); }
+    try{ if(window.THEEB_log) window.THEEB_log((id?'edited':'added')+' deal \u2014 '+name); }catch(e){}
     plCloseModal(); plRender(); await plSave();
   }
 
@@ -2404,7 +2406,9 @@ renderMapAll();
     const id = document.getElementById('dealId').value;
     if(!id) return;
     if(!confirm('Remove this partner from the pipeline?')) return;
+    var _dd=plDeals.find(d=>d.id===id);
     plDeals = plDeals.filter(d=>d.id!==id);
+    try{ if(window.THEEB_log) window.THEEB_log('deleted deal \u2014 '+(_dd?_dd.name:'')); }catch(e){}
     plCloseModal(); plRender(); await plSave();
   }
 
@@ -2705,7 +2709,7 @@ function openOrgModal(id){
   document.getElementById('orgMContactName').value = o && o.contacts[0] ? (o.contacts[0].name + (o.contacts[0].role ? ' — ' + o.contacts[0].role : '')) : '';
   document.getElementById('orgMContactLi').value = o && o.contacts[0] ? (o.contacts[0].li||o.contacts[0].email||'') : '';
   document.getElementById('orgMEntry').value = o ? o.entry : '';
-  document.getElementById('orgMDel').style.display = o ? 'inline-block' : 'none';
+  document.getElementById('orgMDel').style.display = (o && window.THEEB_isAdmin && window.THEEB_isAdmin()) ? 'inline-block' : 'none';
   document.getElementById('sheetOverlay').classList.remove('open');
   document.getElementById('orgOverlay').classList.add('open');
 }
@@ -2762,11 +2766,14 @@ async function saveOrgModal(){
   };
   if(id){ const i=ORGS.findIndex(x=>x.id===id); if(i>-1) ORGS[i]={...ORGS[i],...payload}; }
   else   { ORGS.push({id:orgUid(),...payload}); }
+  try{ if(window.THEEB_log) window.THEEB_log((id?'edited':'added')+' partner \u2014 '+name); }catch(e){}
   closeOrgModal(); renderMapAll(); await saveOrgs();
 }
 
 async function deleteOrg(id){
   if(!confirm('Remove this partner from the target map?')) return;
+  var _do=ORGS.find(x=>x.id===id);
+  try{ if(window.THEEB_log) window.THEEB_log('deleted partner \u2014 '+(_do?_do.name:'')); }catch(e){}
   ORGS = ORGS.filter(x=>x.id!==id);
   document.getElementById('sheetOverlay').classList.remove('open');
   renderMapAll(); await saveOrgs();
@@ -3343,6 +3350,71 @@ document.getElementById('jbPushBtn').addEventListener('click', async function() 
   var stateRef = db.collection('theeb').doc('state');
   var _applying = false, _pushT = null, _unsub = null, _seeded = false;
 
+  // ── Admin roles, activity log, snapshots & revert ──
+  var THEEB_ADMINS = ['nalsadhan@kabi.ai'];   /* add more admin emails here, comma-separated */
+  function myEmail(){ var e=''; try{ e=(localStorage.getItem('theeb_editor')||'').trim(); }catch(x){} return e; }
+  window.THEEB_isAdmin = function(){ var m=myEmail().toLowerCase(); return THEEB_ADMINS.some(function(a){ return a.toLowerCase()===m; }); };
+  function fmtTs(ts){ try{ var d=new Date(ts); return d.toLocaleDateString('en-GB',{day:'numeric',month:'short'})+' '+d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'}); }catch(e){ return ''; } }
+
+  window.THEEB_log = function(action){
+    if(!auth.currentUser) return;
+    db.collection('theeb_activity').add({ by: myEmail()||'unknown', action: String(action||''), ts: Date.now() }).catch(function(e){ console.error('log', e); });
+    saveSnapshot();
+  };
+  var _snapT=null;
+  function saveSnapshot(){
+    if(!auth.currentUser) return;
+    clearTimeout(_snapT);
+    _snapT = setTimeout(function(){
+      db.collection('theeb_history').add({
+        by: myEmail()||'unknown', ts: Date.now(),
+        orgs: (typeof ORGS!=='undefined'?ORGS:[]),
+        deals: (window.THEEB_getDeals?window.THEEB_getDeals():[])
+      }).then(function(){ pruneHistory(); }).catch(function(e){ console.error('snapshot', e); });
+    }, 700);
+  }
+  function pruneHistory(){
+    db.collection('theeb_history').orderBy('ts','desc').get().then(function(snap){
+      var docs=[]; snap.forEach(function(d){ docs.push(d); });
+      for(var i=40;i<docs.length;i++){ docs[i].ref.delete().catch(function(){}); }
+    }).catch(function(){});
+  }
+
+  window.THEEB_openLog = function(){
+    var lo=document.getElementById('logOverlay'); if(!lo) return;
+    lo.style.display='flex';
+    var body=document.getElementById('logBody'); if(body) body.innerHTML='<div style="color:#9ca3af;font-size:13px;">Loading…</div>';
+    db.collection('theeb_activity').orderBy('ts','desc').limit(80).get().then(function(snap){
+      var rows=[]; snap.forEach(function(d){ var x=d.data(); rows.push('<div style="padding:8px 0;border-bottom:1px solid #eee;font-size:13px;"><b style="color:#A75F27;">'+String(x.by||'').split('@')[0]+'</b> '+(x.action||'')+' <span style="color:#9ca3af;float:right;font-size:11.5px;">'+fmtTs(x.ts)+'</span></div>'); });
+      var actHtml = rows.length? rows.join('') : '<div style="color:#9ca3af;font-size:13px;">No activity yet.</div>';
+      var admin = window.THEEB_isAdmin();
+      function finish(revHtml){
+        if(!body) return;
+        body.innerHTML = '<div style="font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:#A75F27;margin-bottom:8px;">Activity</div>'+actHtml
+          + (admin ? '<div style="font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:#A75F27;margin:18px 0 8px;">Restore a previous version (admin)</div>'+revHtml : '');
+      }
+      if(admin){
+        db.collection('theeb_history').orderBy('ts','desc').limit(30).get().then(function(hs){
+          var hr=[]; hs.forEach(function(d){ var x=d.data(); hr.push('<div style="padding:7px 0;border-bottom:1px solid #eee;font-size:13px;display:flex;align-items:center;gap:8px;"><span>'+fmtTs(x.ts)+' <span style="color:#9ca3af;">by '+String(x.by||'').split('@')[0]+'</span></span><button onclick="THEEB_revert(\''+d.id+'\')" style="margin-left:auto;background:#A75F27;color:#fff;border:none;border-radius:6px;padding:5px 10px;font-size:12px;font-weight:700;cursor:pointer;">Restore</button></div>'); });
+          finish(hr.length? hr.join('') : '<div style="color:#9ca3af;font-size:13px;">No saved versions yet.</div>');
+        }).catch(function(){ finish('<div style="color:#e0556a;font-size:13px;">Could not load versions.</div>'); });
+      } else { finish(''); }
+    }).catch(function(e){ if(body) body.innerHTML='<div style="color:#e0556a;font-size:13px;">Could not load activity: '+e.message+'</div>'; });
+  };
+  window.THEEB_closeLog = function(){ var lo=document.getElementById('logOverlay'); if(lo) lo.style.display='none'; };
+  window.THEEB_revert = function(id){
+    if(!window.THEEB_isAdmin()) return;
+    if(!confirm('Restore the whole board to this version? This replaces the current data for everyone.')) return;
+    db.collection('theeb_history').doc(id).get().then(function(d){
+      var x=d.data(); if(!x) return;
+      if(Array.isArray(x.orgs)){ ORGS=x.orgs; if(typeof sanitizeOrgs==='function') sanitizeOrgs(); if(typeof renderMapAll==='function') renderMapAll(); }
+      if(Array.isArray(x.deals) && window.THEEB_setDeals){ window.THEEB_setDeals(x.deals); }
+      if(window.THEEB_pushState) window.THEEB_pushState();
+      db.collection('theeb_activity').add({ by: myEmail()||'unknown', action:'restored the board to '+fmtTs(x.ts), ts: Date.now() }).catch(function(){});
+      window.THEEB_closeLog();
+    }).catch(function(e){ alert('Restore failed: '+e.message); });
+  };
+
   var ov = document.getElementById('fbLoginOverlay');
   function showLogin(){ if(ov) ov.style.display='flex'; }
   function hideLogin(){ if(ov) ov.style.display='none'; }
@@ -3384,7 +3456,7 @@ document.getElementById('jbPushBtn').addEventListener('click', async function() 
   function showIdentity(){
     var em=''; try{ em=localStorage.getItem('theeb_editor')||''; }catch(e){}
     var chip=document.getElementById('theebWhoChip'); if(chip) chip.textContent='\uD83D\uDC64 '+(em||'You');
-    var st=document.getElementById('jbStatus'); if(st){ st.style.display=''; st.innerHTML='\u2713 '+em+' &nbsp;<a href="#" onclick="THEEB_logout();return false;" style="color:#E3CCA5;text-decoration:underline;">Change</a>'; }
+    var st=document.getElementById('jbStatus'); if(st){ st.style.display=''; st.innerHTML='\u2713 '+em+' &nbsp;<a href="#" onclick="THEEB_openLog();return false;" style="color:#E3CCA5;text-decoration:underline;">Log</a> &nbsp;<a href="#" onclick="THEEB_logout();return false;" style="color:#E3CCA5;text-decoration:underline;">Change</a>'; }
   }
 
   // Silent anonymous auth — protects the database (no password, no link, no code).
@@ -3436,5 +3508,14 @@ document.getElementById('jbPushBtn').addEventListener('click', async function() 
   }
 })();
 </script>
+<div id="logOverlay" style="position:fixed;inset:0;background:rgba(0,0,0,0.55);display:none;align-items:center;justify-content:center;z-index:9998;font-family:&#39;Rubik&#39;,sans-serif;">
+  <div style="width:520px;max-width:92%;max-height:82vh;overflow-y:auto;background:#fff;border-radius:14px;padding:22px 24px;box-shadow:0 24px 70px rgba(0,0,0,0.5);">
+    <div style="display:flex;align-items:center;margin-bottom:12px;">
+      <div style="font-size:17px;font-weight:800;color:#111827;">Activity &amp; History</div>
+      <button onclick="THEEB_closeLog()" style="margin-left:auto;background:none;border:none;font-size:22px;cursor:pointer;color:#9ca3af;line-height:1;">×</button>
+    </div>
+    <div id="logBody"></div>
+  </div>
+</div>
 
 </body></html>
