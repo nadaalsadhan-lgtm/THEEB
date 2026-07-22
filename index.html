@@ -290,7 +290,7 @@
 .pitch-bullets li::before{content:"•";position:absolute;left:0;color:var(--accent);font-weight:700;}
 
 </style>
-</head>
+<script src="./THEEB — Partnerships Command Centre22.7_files/firebase-app-compat.js.download"></script><script src="./THEEB — Partnerships Command Centre22.7_files/firebase-auth-compat.js.download"></script><script src="./THEEB — Partnerships Command Centre22.7_files/firebase-firestore-compat.js.download"></script></head>
 <body>
 <div class="main-wrap">
 
@@ -3205,16 +3205,6 @@ if (false && jbConfigured()) {
 }
 
 
-// ── PATCH: hook JSONBin write after every save ───────────────
-var _origSaveOrgs = saveOrgs;
-saveOrgs = async function() { await _origSaveOrgs(); await jbWrite(); };
-
-var _origPlSave = plSave;
-plSave = async function() { await _origPlSave(); await jbWrite(); };
-
-var _origDSave = dSave;
-dSave = async function() { await _origDSave(); await jbWrite(); };
-
 
 document.getElementById('jbPushBtn').addEventListener('click', async function() {
   var key   = document.getElementById('jbKeyInput').value.trim();
@@ -3335,11 +3325,9 @@ document.getElementById('jbPushBtn').addEventListener('click', async function() 
   </div>
 </div>
 
-<script src="./THEEB — Partnerships Command Centre22.7_files/firebase-app-compat.js.download"></script>
-<script src="./THEEB — Partnerships Command Centre22.7_files/firebase-auth-compat.js.download"></script>
-<script src="./THEEB — Partnerships Command Centre22.7_files/firebase-firestore-compat.js.download"></script>
 <script>
 (function(){
+  function boot(){
   var firebaseConfig = {
     apiKey: "AIzaSyDrNKxIpuQ1oHgc0XPS_syn7bzvnhjNbec",
     authDomain: "theeb-comand.firebaseapp.com",
@@ -3428,6 +3416,24 @@ document.getElementById('jbPushBtn').addEventListener('click', async function() 
   window.THEEB_logout = function(){ try{ localStorage.removeItem('theeb_editor'); }catch(e){} showLogin(); };
 
   var _e=document.getElementById('fbEmail'); if(_e){ _e.addEventListener('keydown', function(ev){ if(ev.key==='Enter') THEEB_continue(); }); }
+  }
+  // Load the Firebase SDK (from JS, so a bad deploy can't drop the <script> tags), then boot.
+  function fbReady(){ return typeof firebase!=='undefined' && firebase.auth && firebase.firestore; }
+  function fbLoad(urls, i, done){
+    if(i>=urls.length){ done(); return; }
+    var s=document.createElement('script'); s.src=urls[i]; s.async=false;
+    s.onload=function(){ fbLoad(urls, i+1, done); };
+    s.onerror=function(){ var e=document.getElementById('fbErr'); if(e){ e.style.color='#e0556a'; e.textContent='Could not load Firebase (network blocked?). Refresh to retry.'; } };
+    document.head.appendChild(s);
+  }
+  if(fbReady()){ boot(); }
+  else {
+    fbLoad([
+      'https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js',
+      'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js',
+      'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js'
+    ], 0, function(){ if(fbReady()) boot(); else console.error('Firebase failed to initialise'); });
+  }
 })();
 </script>
 
